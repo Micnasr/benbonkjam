@@ -40,7 +40,6 @@ public class BehaviourMovement2 : MonoBehaviour
 
     void Jump()
     {
-        print(0);
         GetComponent<Rigidbody>().AddForce(Vector3.up * jumpSpeed * 35);
 
     }
@@ -50,8 +49,6 @@ public class BehaviourMovement2 : MonoBehaviour
         if(collider.CompareTag("Ground"))
         {
             canJump = true;
-            print(canJump);
-
         }
     }
 }

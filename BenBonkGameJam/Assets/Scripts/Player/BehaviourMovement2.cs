@@ -8,21 +8,33 @@ public class BehaviourMovement2 : MonoBehaviour
     public float speed = 10.0f;
     public float jumpSpeed = 10.0f;
 
-    public float X;
+    [HideInInspector] public bool isRunning = false;
 
-    public bool canJump;
+    private float X;
+    private bool canJump;
+    private bool inFluid = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-
         Move();
+
+        if (inFluid == true)
+        {
+            Physics.gravity = new Vector3(0, -4.905f, 0);
+
+            speed = speed / 2;
+
+            jumpSpeed = jumpSpeed / 2;
+        }
+
+        if (inFluid == false)
+        {
+            Physics.gravity = new Vector3(0, -9.81f, 0);
+
+            speed = 10f;
+
+            jumpSpeed = 10f;
+        }
     }
 
     void Move()
@@ -31,33 +43,45 @@ public class BehaviourMovement2 : MonoBehaviour
 
         gameObject.GetComponent<Rigidbody>().velocity = new Vector3(X * speed, gameObject.GetComponent<Rigidbody>().velocity.y, 0);
 
-        if(Input.GetKeyDown(KeyCode.Space) && canJump == true)
+        if(Input.GetKeyDown(KeyCode.Space) )
         {
-            Jump();
-            canJump = false;
+
+            GetComponent<Rigidbody>().velocity = Vector3.up * jumpSpeed;
+            
         }
 
         if (Input.GetKey(KeyCode.D))
         {
             transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
-        } else if (Input.GetKey(KeyCode.A))
+            isRunning = true;
+        } 
+        
+        else if (Input.GetKey(KeyCode.A))
         {
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+            isRunning = true;
         }
 
-    }
-
-    void Jump()
-    {
-        GetComponent<Rigidbody>().AddForce(Vector3.up * jumpSpeed * 35);
-
+        else
+        {
+            isRunning = false;
+        }
     }
 
     public void OnTriggerEnter(Collider collider)
     {
-        if(collider.CompareTag("Ground"))
+
+        if (collider.CompareTag("Fluid"))
         {
-            canJump = true;
+            inFluid = true;
+        }
+    }
+
+    public void OnTriggerExit(Collider collider)
+    {
+        if (collider.CompareTag("Fluid"))
+        {
+            inFluid = false;
         }
     }
 }

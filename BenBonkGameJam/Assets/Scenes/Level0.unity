@@ -214,6 +214,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 27497645}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &139455237 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7351162350894849997, guid: 75766d01fc5ac2947b0c71059a63ef98,
+    type: 3}
+  m_PrefabInstance: {fileID: 572592048}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &328996510
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,7 +534,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &706782775
 GameObject:
@@ -561,7 +567,7 @@ Transform:
   - {fileID: 1796435267}
   - {fileID: 1866057924}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &940346303
 GameObject:
@@ -655,7 +661,7 @@ Transform:
   m_LocalScale: {x: 1.11, y: 0.4371713, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &940346308
 MonoBehaviour:
@@ -723,7 +729,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 74
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -795,10 +801,11 @@ Transform:
   m_GameObject: {fileID: 1169063003}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.2397369, y: 4.173162, z: -13.666016}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+ m_LocalScale: {x: 1, y: 1, z: 1}
+
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 139455237}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1603553002
 GameObject:

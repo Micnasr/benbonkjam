@@ -10,6 +10,7 @@ public class wincube : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         StartCoroutine(GoToNextLevel());
+        FindObjectOfType<audiomanager>().Play("WinSound");
     }
     
 

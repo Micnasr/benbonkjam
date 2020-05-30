@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
+    public GameObject deathEffect;
+    public GameObject playerModel;
+
+    bool on = false;
 
     [Header("Characteristics")]
     public float health;
@@ -13,8 +17,15 @@ public class Health : MonoBehaviour
     {
         if (health <= 0)
         {
-            Die();
-            Destroy(gameObject);
+
+            if (!on)
+            {
+                Instantiate(deathEffect, transform.position, Quaternion.Euler(-90, 0, 0));
+                FindObjectOfType<audiomanager>().Play("DeathSound");
+                on = true;
+            }
+            playerModel.SetActive(false);
+            StartCoroutine(Die());
         }
     }
 
@@ -26,8 +37,10 @@ public class Health : MonoBehaviour
         }
     }
     
-    void Die()
+    IEnumerator Die()
     {
+        
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

@@ -21,7 +21,7 @@ public class wincube : MonoBehaviour
     IEnumerator GoToNextLevel()
     {
         FadeToLevel();
-        yield return new WaitForSeconds(.3f);
+        yield return new WaitForSeconds(.8f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

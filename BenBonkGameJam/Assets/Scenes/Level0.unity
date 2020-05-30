@@ -1213,6 +1213,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 611297836373278103, guid: f9369371b624278429ec97859f7dc786,
+        type: 3}
+      propertyPath: fallMultipler
+      value: 3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6119233688215674722, guid: f9369371b624278429ec97859f7dc786,
         type: 3}
       propertyPath: m_Name

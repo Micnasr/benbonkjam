@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff05f9e6080d6f944b02805ae37c08f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallMultipler: 2.5
+  fallMultipler: 3.5
   lowJumpMultipler: 2
 --- !u!1001 &6119233687581098994
 PrefabInstance:

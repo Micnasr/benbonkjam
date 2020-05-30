@@ -12,10 +12,28 @@ public class BehaviourMovement2 : MonoBehaviour
     public float X;
 
     public bool canJump;
+    public bool inFluid = false;
 
     void Update()
     {
         Move();
+        if (inFluid == true)
+        {
+            Physics.gravity = new Vector3(0, -4.905f, 0);
+
+            speed = speed / 2;
+
+            jumpSpeed = jumpSpeed / 2;
+        }
+
+        if (inFluid == false)
+        {
+            Physics.gravity = new Vector3(0, -9.81f, 0);
+
+            speed = 10f;
+
+            jumpSpeed = 10f;
+        }
     }
 
     void Move()
@@ -38,6 +56,22 @@ public class BehaviourMovement2 : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
         }
+    }
 
+    public void OnTriggerEnter(Collider collider)
+    {
+
+        if (collider.CompareTag("Fluid"))
+        {
+            inFluid = true;
+        }
+    }
+
+    public void OnTriggerExit(Collider collider)
+    {
+        if (collider.CompareTag("Fluid"))
+        {
+            inFluid = false;
+        }
     }
 }

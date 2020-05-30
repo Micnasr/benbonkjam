@@ -8,7 +8,8 @@ public class BehaviourMovement2 : MonoBehaviour
     public float speed = 10.0f;
     public float jumpSpeed = 10.0f;
 
-    [HideInInspector] public bool isRunning = false;
+     public bool isRunning = false;
+     public bool isJumping = false;
 
     private float X;
     private bool canJump;
@@ -43,10 +44,12 @@ public class BehaviourMovement2 : MonoBehaviour
 
         gameObject.GetComponent<Rigidbody>().velocity = new Vector3(X * speed, gameObject.GetComponent<Rigidbody>().velocity.y, 0);
 
-        if(Input.GetKeyDown(KeyCode.Space) )
+        if(Input.GetKeyDown(KeyCode.Space) && canJump == true)
         {
 
             GetComponent<Rigidbody>().velocity = Vector3.up * jumpSpeed;
+            canJump = false;
+            isJumping = true;
             
         }
 
@@ -75,6 +78,12 @@ public class BehaviourMovement2 : MonoBehaviour
         {
             inFluid = true;
         }
+
+        if (collider.CompareTag("Ground"))
+        {
+            canJump = true;
+            isJumping = false;
+        }
     }
 
     public void OnTriggerExit(Collider collider)
@@ -84,4 +93,6 @@ public class BehaviourMovement2 : MonoBehaviour
             inFluid = false;
         }
     }
+
+    
 }

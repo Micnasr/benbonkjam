@@ -8,15 +8,16 @@ public class BehaviourMovement2 : MonoBehaviour
     public float speed = 10.0f;
     public float jumpSpeed = 10.0f;
 
+    [HideInInspector] public bool isRunning = false;
 
-    public float X;
-
-    public bool canJump;
-    public bool inFluid = false;
+    private float X;
+    private bool canJump;
+    private bool inFluid = false;
 
     void Update()
     {
         Move();
+
         if (inFluid == true)
         {
             Physics.gravity = new Vector3(0, -4.905f, 0);
@@ -52,9 +53,18 @@ public class BehaviourMovement2 : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
-        } else if (Input.GetKey(KeyCode.A))
+            isRunning = true;
+        } 
+        
+        else if (Input.GetKey(KeyCode.A))
         {
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+            isRunning = true;
+        }
+
+        else
+        {
+            isRunning = false;
         }
     }
 

@@ -11,6 +11,7 @@ public class BehaviourMovement2 : MonoBehaviour
     public float X;
 
     public bool canJump;
+    public bool inFluid;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,25 @@ public class BehaviourMovement2 : MonoBehaviour
     {
 
         Move();
+
+        if (inFluid == true)
+        {
+            Physics.gravity = new Vector3(0, -4.905f, 0);
+
+            speed = 5.0f;
+
+            jumpSpeed = 5.0f;
+        }
+
+        if (inFluid == false)
+        {
+            Physics.gravity = new Vector3(0, -9.81f, 0);
+
+            speed = 10.0f;
+
+            jumpSpeed = 10.0f;
+        }
+
     }
 
     void Move()
@@ -52,6 +72,19 @@ public class BehaviourMovement2 : MonoBehaviour
             canJump = true;
             print(canJump);
 
+        }
+
+        if(collider.CompareTag("Fluid"))
+        {
+            inFluid = true;
+        }
+    }
+
+    public void OnTriggerExit(Collider collider)
+    {
+        if(collider.CompareTag("Fluid"))
+        {
+            inFluid = false;
         }
     }
 }

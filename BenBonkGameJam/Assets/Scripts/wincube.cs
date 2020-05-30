@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class wincube : MonoBehaviour
 {
     public Animator animator;
+    public GameObject winEffect;
 
     void OnCollisionEnter(Collision collision)
     {
@@ -20,8 +21,10 @@ public class wincube : MonoBehaviour
 
     IEnumerator GoToNextLevel()
     {
-        FadeToLevel();
+        Instantiate(winEffect, transform.position, Quaternion.Euler(-90, 0, 0));
         yield return new WaitForSeconds(.8f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        FadeToLevel();
+        yield return new WaitForSeconds(1.2f);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

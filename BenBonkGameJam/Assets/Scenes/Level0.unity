@@ -754,6 +754,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 328996512}
+  winEffect: {fileID: 5166918654954406665, guid: e009d2adb4cb2fa48b26a04a5534c4d2,
+    type: 3}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ public class TreeRandomizer : MonoBehaviour
         foreach (GameObject children in GameObject.FindGameObjectsWithTag("WoodBone"))
         {
             if (i >= angles.Count) break;
+            if (!children.transform.IsChildOf(transform)) continue;
             children.transform.eulerAngles = angles[i];
             i++;
         }

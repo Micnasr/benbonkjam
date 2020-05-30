@@ -20,7 +20,6 @@ public class Health : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {
-        print("reload");
         if (collision.tag == "EnemyBullet")
         {
             health -= 1;

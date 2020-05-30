@@ -8,39 +8,32 @@ public class BehaviourMovement2 : MonoBehaviour
     public float speed = 10.0f;
     public float jumpSpeed = 10.0f;
 
+
     public float X;
 
     public bool canJump;
     public bool inFluid;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-
         Move();
 
         if (inFluid == true)
         {
             Physics.gravity = new Vector3(0, -4.905f, 0);
 
-            speed = 5.0f;
+            speed = speed/2;
 
-            jumpSpeed = 5.0f;
+            jumpSpeed jumpSpeed/2;
         }
 
         if (inFluid == false)
         {
             Physics.gravity = new Vector3(0, -9.81f, 0);
 
-            speed = 10.0f;
+            speed = speed * 2;
 
-            jumpSpeed = 10.0f;
+            jumpSpeed = speed * 2;
         }
 
     }
@@ -51,10 +44,11 @@ public class BehaviourMovement2 : MonoBehaviour
 
         gameObject.GetComponent<Rigidbody>().velocity = new Vector3(X * speed, gameObject.GetComponent<Rigidbody>().velocity.y, 0);
 
-        if(Input.GetKeyDown(KeyCode.Space) && canJump == true)
+        if(Input.GetKeyDown(KeyCode.Space) )
         {
-            Jump();
-            canJump = false;
+
+            GetComponent<Rigidbody>().velocity = Vector3.up * jumpSpeed;
+            
         }
 
         if (Input.GetKey(KeyCode.D))
@@ -66,20 +60,9 @@ public class BehaviourMovement2 : MonoBehaviour
         }
 
     }
-
-    void Jump()
-    {
-        GetComponent<Rigidbody>().AddForce(Vector3.up * jumpSpeed * 35);
-
-    }
-
     public void OnTriggerEnter(Collider collider)
     {
-        if(collider.CompareTag("Ground"))
-        {
-            canJump = true;
-        }
-
+       
         if(collider.CompareTag("Fluid"))
         {
             inFluid = true;
@@ -93,4 +76,5 @@ public class BehaviourMovement2 : MonoBehaviour
             inFluid = false;
         }
     }
+
 }

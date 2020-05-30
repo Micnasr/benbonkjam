@@ -49,7 +49,6 @@ public class BehaviourMovement2 : MonoBehaviour
         {
             canJump = true;
 
-            Debug.Log("L");
         }
     }
 }

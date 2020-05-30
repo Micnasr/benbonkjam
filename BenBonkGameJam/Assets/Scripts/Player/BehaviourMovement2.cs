@@ -36,6 +36,15 @@ public class BehaviourMovement2 : MonoBehaviour
             Jump();
             canJump = false;
         }
+
+        if (Input.GetKey(KeyCode.D))
+        {
+            transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
+        } else if (Input.GetKey(KeyCode.A))
+        {
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+        }
+
     }
 
     void Jump()

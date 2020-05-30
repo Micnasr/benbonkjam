@@ -58,6 +58,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 070116c19160d9f4281ba8fd23d3fe24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathEffect: {fileID: 0}
+  playerModel: {fileID: 0}
   health: 1
 --- !u!95 &1814037878893022706
 Animator:
@@ -159,6 +161,7 @@ MonoBehaviour:
   speed: 10
   jumpSpeed: 10
   isRunning: 0
+  isJumping: 0
 --- !u!65 &6119233688215674720
 BoxCollider:
   m_ObjectHideFlags: 0

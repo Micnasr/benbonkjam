@@ -27,6 +27,11 @@ public class Health : MonoBehaviour
             playerModel.SetActive(false);
             StartCoroutine(Die());
         }
+
+        if (transform.position.y < -20)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
     void OnTriggerEnter(Collider collision)

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,11 +7,17 @@ public class wincube : MonoBehaviour
 {
     public Animator animator;
     public GameObject winEffect;
+    Boolean on = false;
 
     void OnCollisionEnter(Collision collision)
     {
+        if (!on)
+        {
+            FindObjectOfType<audiomanager>().Play("WinSound");
+            on = true;
+        }
         StartCoroutine(GoToNextLevel());
-        FindObjectOfType<audiomanager>().Play("WinSound");
+        
     }
     
 
@@ -26,6 +33,6 @@ public class wincube : MonoBehaviour
         yield return new WaitForSeconds(.8f);
         FadeToLevel();
         yield return new WaitForSeconds(1.2f);
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

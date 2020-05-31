@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!64 &4615744827573265356
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871608482159255219}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5021715064179871079, guid: f77f2414545eec14e8e0bac0b6012198, type: 3}
 --- !u!1001 &1674138397121035321
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10,7 +24,7 @@ PrefabInstance:
     - target: {fileID: 6508418524035540187, guid: bd67f71746090df4995251dde967e7ca,
         type: 3}
       propertyPath: m_Name
-      value: EdgeLeft
+      value: EdgeLeft Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8931926363040441450, guid: bd67f71746090df4995251dde967e7ca,
         type: 3}
@@ -67,5 +81,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8931926363040441450, guid: bd67f71746090df4995251dde967e7ca,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931926363040441450, guid: bd67f71746090df4995251dde967e7ca,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd67f71746090df4995251dde967e7ca, type: 3}
+--- !u!1 &1871608482159255219 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1063682937587262090, guid: bd67f71746090df4995251dde967e7ca,
+    type: 3}
+  m_PrefabInstance: {fileID: 1674138397121035321}
+  m_PrefabAsset: {fileID: 0}

@@ -58,6 +58,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 070116c19160d9f4281ba8fd23d3fe24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathEffect: {fileID: 0}
+  playerModel: {fileID: 0}
   health: 1
 --- !u!95 &1814037878893022706
 Animator:
@@ -103,7 +105,7 @@ GameObject:
   - component: {fileID: 6119233688215674734}
   - component: {fileID: 6119233688215674735}
   - component: {fileID: 6119233688215674720}
-  - component: {fileID: 6119233688215674721}
+  - component: {fileID: 8531921598538112702}
   - component: {fileID: 611297836373278103}
   m_Layer: 0
   m_Name: Player 1
@@ -159,6 +161,7 @@ MonoBehaviour:
   speed: 10
   jumpSpeed: 10
   isRunning: 0
+  isJumping: 0
 --- !u!65 &6119233688215674720
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -170,10 +173,10 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5484276, y: 0.36751664, z: 1}
-  m_Center: {x: 0.009814262, y: 0.050991952, z: 0}
---- !u!65 &6119233688215674721
-BoxCollider:
+  m_Size: {x: 0.5484276, y: 0.46387267, z: 1}
+  m_Center: {x: 0.009814262, y: 0.0028139353, z: 0}
+--- !u!136 &8531921598538112702
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -182,9 +185,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.6957083, y: 3.7081127, z: 1}
-  m_Center: {x: 0.03434515, y: 1.8642807, z: 0}
+  m_Radius: 0.3227949
+  m_Height: 3.92731
+  m_Direction: 1
+  m_Center: {x: 0.033403397, y: 1.8989763, z: 0}
 --- !u!114 &611297836373278103
 MonoBehaviour:
   m_ObjectHideFlags: 0

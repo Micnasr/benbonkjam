@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Fluid
+  - WoodBone
   layers:
   - Default
   - TransparentFX

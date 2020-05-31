@@ -1827,6 +1827,80 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1001 &2901676393519096366
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3190736169067687331, guid: 8b0c778ca62ce2641815cdbda146182f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 29.779297
+      objectReference: {fileID: 0}
+    - target: {fileID: 3190736169067687331, guid: 8b0c778ca62ce2641815cdbda146182f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 28.804688
+      objectReference: {fileID: 0}
+    - target: {fileID: 3190736169067687331, guid: 8b0c778ca62ce2641815cdbda146182f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 41.4375
+      objectReference: {fileID: 0}
+    - target: {fileID: 3190736169067687331, guid: 8b0c778ca62ce2641815cdbda146182f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3190736169067687331, guid: 8b0c778ca62ce2641815cdbda146182f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3190736169067687331, guid: 8b0c778ca62ce2641815cdbda146182f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3190736169067687331, guid: 8b0c778ca62ce2641815cdbda146182f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3190736169067687331, guid: 8b0c778ca62ce2641815cdbda146182f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3190736169067687331, guid: 8b0c778ca62ce2641815cdbda146182f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3190736169067687331, guid: 8b0c778ca62ce2641815cdbda146182f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3190736169067687331, guid: 8b0c778ca62ce2641815cdbda146182f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666646816230925197, guid: 8b0c778ca62ce2641815cdbda146182f,
+        type: 3}
+      propertyPath: m_Name
+      value: BackGroundMountainsOne
+      objectReference: {fileID: 0}
+    - target: {fileID: 8346299051946347007, guid: 8b0c778ca62ce2641815cdbda146182f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.008
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8b0c778ca62ce2641815cdbda146182f, type: 3}
 --- !u!1001 &3396310233261649324
 PrefabInstance:
   m_ObjectHideFlags: 0

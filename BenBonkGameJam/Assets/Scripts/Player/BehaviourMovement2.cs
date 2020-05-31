@@ -15,6 +15,8 @@ public class BehaviourMovement2 : MonoBehaviour
     private bool canJump;
     private bool inFluid = false;
 
+    public bool inTutorial = false;
+
     void Update()
     {
         Move();
@@ -40,35 +42,76 @@ public class BehaviourMovement2 : MonoBehaviour
 
     void Move()
     {
-        X = Input.GetAxis("Horizontal");
+        if (inTutorial == false)
+        {
+            X = Input.GetAxis("Horizontal");
+        }
+
+        if (inTutorial == true)
+        {
+            X = Input.GetAxis("FalseHori");
+        }
 
         gameObject.GetComponent<Rigidbody>().velocity = new Vector3(X * speed, gameObject.GetComponent<Rigidbody>().velocity.y, 0);
 
-        if(Input.GetKeyDown(KeyCode.Space) && canJump == true)
+        if (inTutorial == false)
         {
+            if (Input.GetKeyDown(KeyCode.Space) && canJump == true)
+            {
 
-            GetComponent<Rigidbody>().velocity = Vector3.up * jumpSpeed;
-            canJump = false;
-            isJumping = true;
-            
+                GetComponent<Rigidbody>().velocity = Vector3.up * jumpSpeed;
+                canJump = false;
+                isJumping = true;
+
+            }
+
+            if (Input.GetKey(KeyCode.D))
+            {
+                transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
+                isRunning = true;
+            }
+
+            else if (Input.GetKey(KeyCode.A))
+            {
+                transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+                isRunning = true;
+            }
+
+            else
+            {
+                isRunning = false;
+            }
         }
 
-        if (Input.GetKey(KeyCode.D))
+        if (inTutorial == true)
         {
-            transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
-            isRunning = true;
-        } 
-        
-        else if (Input.GetKey(KeyCode.A))
-        {
-            transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
-            isRunning = true;
+            if (Input.GetKeyDown(KeyCode.Space) && canJump == true)
+            {
+
+                GetComponent<Rigidbody>().velocity = Vector3.up * jumpSpeed;
+                canJump = false;
+                isJumping = true;
+
+            }
+
+            if (Input.GetKey(KeyCode.L))
+            {
+                transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
+                isRunning = true;
+            }
+
+            else if (Input.GetKey(KeyCode.J))
+            {
+                transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+                isRunning = true;
+            }
+
+            else
+            {
+                isRunning = false;
+            }
         }
 
-        else
-        {
-            isRunning = false;
-        }
     }
 
     public void OnTriggerEnter(Collider collider)
@@ -91,6 +134,14 @@ public class BehaviourMovement2 : MonoBehaviour
         if (collider.CompareTag("Fluid"))
         {
             inFluid = false;
+        }
+    }
+
+    public void OnTriggerStay(Collider collider)
+    {
+        if (collider.CompareTag("FakeMove"))
+        {
+            inTutorial = true;
         }
     }
 

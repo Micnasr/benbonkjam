@@ -38,7 +38,7 @@ public class StoryManager : MonoBehaviour
         Line2.SetActive(false);
         Line3.SetActive(false);
         background.SetActive(false);
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     }

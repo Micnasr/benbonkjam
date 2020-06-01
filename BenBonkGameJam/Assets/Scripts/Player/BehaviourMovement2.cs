@@ -150,6 +150,12 @@ public class BehaviourMovement2 : MonoBehaviour
         {
             inFluid = false;
         }
+        if (collider.CompareTag("Ground"))
+        {
+            canJump = false;
+            
+          
+        }
     }
 
     public void OnTriggerStay(Collider collider)

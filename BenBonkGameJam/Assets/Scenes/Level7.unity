@@ -7837,6 +7837,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6119233688215674734, guid: f9369371b624278429ec97859f7dc786,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 8971278363135713609, guid: f9369371b624278429ec97859f7dc786,
         type: 3}
       propertyPath: deathEffect

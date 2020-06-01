@@ -58,8 +58,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 070116c19160d9f4281ba8fd23d3fe24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathEffect: {fileID: 0}
-  playerModel: {fileID: 0}
+  deathEffect: {fileID: 1280637783870168125, guid: 8ae9226a4518be446b6cf1aa3402a4ed,
+    type: 3}
+  playerModel: {fileID: 3305909133048648323}
   health: 1
 --- !u!95 &8805301547810248427
 Animator:
@@ -184,7 +185,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6119233688215674722}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 4f230fb94b1dbae489eb6c1d75452fb9, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.3227949
@@ -203,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff05f9e6080d6f944b02805ae37c08f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallMultipler: 3.5
+  fallMultipler: 3.75
   lowJumpMultipler: 2
 --- !u!1001 &6827773424414935946
 PrefabInstance:

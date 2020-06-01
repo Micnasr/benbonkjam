@@ -25,7 +25,7 @@ public class BehaviourMovement2 : MonoBehaviour
         rb = GetComponent<Rigidbody>(); // Localized variable (easier to understand and consumes less power)
     }
 
-    void FixedUpdate() // Works better with Physics based code
+    void Update() // Works better with Physics based code
     {
         Move();
 
@@ -141,6 +141,7 @@ public class BehaviourMovement2 : MonoBehaviour
             isFalling = false;
             isJumping = false;
         }
+       
     }
 
     public void OnTriggerExit(Collider collider)
@@ -148,6 +149,12 @@ public class BehaviourMovement2 : MonoBehaviour
         if (collider.CompareTag("Fluid"))
         {
             inFluid = false;
+        }
+        if (collider.CompareTag("Ground"))
+        {
+            canJump = false;
+            
+          
         }
     }
 

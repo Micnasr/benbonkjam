@@ -144,7 +144,7 @@ public class BehaviourMovement2 : MonoBehaviour
        
     }
 
-    public void OnTriggerExit(Collider collider)
+   /* public void OnTriggerExit(Collider collider)
     {
         if (collider.CompareTag("Fluid"))
         {
@@ -157,6 +157,7 @@ public class BehaviourMovement2 : MonoBehaviour
           
         }
     }
+   */
 
     public void OnTriggerStay(Collider collider)
     {

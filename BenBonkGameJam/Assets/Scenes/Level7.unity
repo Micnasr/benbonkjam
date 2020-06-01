@@ -843,7 +843,7 @@ PrefabInstance:
     - target: {fileID: 7895230981311054054, guid: d85afd75514867c468da44e75cb4ad66,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.8
+      value: -4.24
       objectReference: {fileID: 0}
     - target: {fileID: 7895230981311054054, guid: d85afd75514867c468da44e75cb4ad66,
         type: 3}
@@ -903,7 +903,7 @@ PrefabInstance:
     - target: {fileID: 7895230981311054055, guid: d85afd75514867c468da44e75cb4ad66,
         type: 3}
       propertyPath: m_TagString
-      value: EnemyBullet
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d85afd75514867c468da44e75cb4ad66, type: 3}

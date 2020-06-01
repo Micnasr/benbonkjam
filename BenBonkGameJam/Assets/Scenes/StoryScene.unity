@@ -5600,7 +5600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.01
-  fullText: This is the story of a messenger that has been requested a strange mission.
+  fullText: This is the story of a messenger that has been sent on a strange mission.
 --- !u!114 &1561475905
 MonoBehaviour:
   m_ObjectHideFlags: 0

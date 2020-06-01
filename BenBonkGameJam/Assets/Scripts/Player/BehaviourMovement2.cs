@@ -8,8 +8,11 @@ public class BehaviourMovement2 : MonoBehaviour
     public float speed = 10.0f;
     public float jumpSpeed = 10.0f;
 
-     public bool isRunning = false;
-     public bool isJumping = false;
+    public bool isRunning = false;
+    public bool isJumping = false;
+    public bool isFalling = false;
+
+    Rigidbody rb;
 
     private float X;
     private bool canJump;
@@ -17,7 +20,12 @@ public class BehaviourMovement2 : MonoBehaviour
 
     public bool inTutorial = false;
 
-    void Update()
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>(); // Localized variable (easier to understand and consumes less power)
+    }
+
+    void FixedUpdate() // Works better with Physics based code
     {
         Move();
 
@@ -52,14 +60,19 @@ public class BehaviourMovement2 : MonoBehaviour
             X = Input.GetAxis("FalseHori");
         }
 
-        gameObject.GetComponent<Rigidbody>().velocity = new Vector3(X * speed, gameObject.GetComponent<Rigidbody>().velocity.y, 0);
+        rb.velocity = new Vector3(X * speed, rb.velocity.y, 0);
+
+        if (rb.velocity.y < 0 && isJumping) // Applies Falling animation
+        {
+            isFalling = true;
+        }
 
         if (inTutorial == false)
         {
             if (Input.GetKeyDown(KeyCode.Space) && canJump == true)
             {
 
-                GetComponent<Rigidbody>().velocity = Vector3.up * jumpSpeed;
+                rb.velocity = Vector3.up * jumpSpeed;
                 canJump = false;
                 isJumping = true;
 
@@ -88,7 +101,7 @@ public class BehaviourMovement2 : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) && canJump == true)
             {
 
-                GetComponent<Rigidbody>().velocity = Vector3.up * jumpSpeed;
+                rb.velocity = Vector3.up * jumpSpeed;
                 canJump = false;
                 isJumping = true;
 
@@ -125,6 +138,7 @@ public class BehaviourMovement2 : MonoBehaviour
         if (collider.CompareTag("Ground"))
         {
             canJump = true;
+            isFalling = false;
             isJumping = false;
         }
     }

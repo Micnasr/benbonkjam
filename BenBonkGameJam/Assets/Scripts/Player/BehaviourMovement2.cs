@@ -25,7 +25,7 @@ public class BehaviourMovement2 : MonoBehaviour
         rb = GetComponent<Rigidbody>(); // Localized variable (easier to understand and consumes less power)
     }
 
-    void FixedUpdate() // Works better with Physics based code
+    void Update() // Works better with Physics based code
     {
         Move();
 

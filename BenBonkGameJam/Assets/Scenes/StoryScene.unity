@@ -2469,8 +2469,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.01
-  fullText: The mage was strange... but he decides to help him, not knowing what
-    was going to begin... Never trust on a Wizardd
+  fullText: The Wizard looked strange... but he decided to help him out, not knowing
+    what was going to happen... Never trust a Wizard!
 --- !u!114 &657326794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6581,8 +6581,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.01
-  fullText: He was just making his job, when a stranger Wizard give him the mission
-    to delivere a letter...
+  fullText: He was minding his own business when a strange Wizard asked him to deliver
+    a letter...
 --- !u!114 &1927122676
 MonoBehaviour:
   m_ObjectHideFlags: 0

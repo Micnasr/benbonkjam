@@ -28,10 +28,15 @@ public class AnimationController : MonoBehaviour
         if (movement.isJumping == true)
         {
             animator.SetBool("isJumping", true);
+            if (movement.isFalling == true)
+            {
+                animator.SetBool("isFalling", true);
+            }
         }
         else
         {
             animator.SetBool("isJumping", false);
+            animator.SetBool("isFalling", true);
         }
     }
 }

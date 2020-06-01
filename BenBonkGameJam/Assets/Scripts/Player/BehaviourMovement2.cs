@@ -141,6 +141,7 @@ public class BehaviourMovement2 : MonoBehaviour
             isFalling = false;
             isJumping = false;
         }
+       
     }
 
     public void OnTriggerExit(Collider collider)

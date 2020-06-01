@@ -5952,12 +5952,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1468865986}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1295983585 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6119233688215674722, guid: f9369371b624278429ec97859f7dc786,
-    type: 3}
-  m_PrefabInstance: {fileID: 6119233687012007623}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1296331494 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5941538779896348048, guid: 0134709435e0ce243b69968d94ba51b2,
@@ -9452,11 +9446,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 611297836373278103, guid: f9369371b624278429ec97859f7dc786,
-        type: 3}
-      propertyPath: fallMultipler
-      value: 3.75
-      objectReference: {fileID: 0}
     - target: {fileID: 6119233688215674722, guid: f9369371b624278429ec97859f7dc786,
         type: 3}
       propertyPath: m_Name
@@ -9516,17 +9505,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8971278363135713609, guid: f9369371b624278429ec97859f7dc786,
-        type: 3}
-      propertyPath: deathEffect
-      value: 
-      objectReference: {fileID: 1280637783870168125, guid: 8ae9226a4518be446b6cf1aa3402a4ed,
-        type: 3}
-    - target: {fileID: 8971278363135713609, guid: f9369371b624278429ec97859f7dc786,
-        type: 3}
-      propertyPath: playerModel
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9369371b624278429ec97859f7dc786, type: 3}

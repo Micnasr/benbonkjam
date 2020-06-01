@@ -7128,7 +7128,7 @@ MonoBehaviour:
   firePoint: {fileID: 743328388}
   Bullet: {fileID: 7233536391890974513, guid: 98d15360d0e78344d802ca30b1250c04, type: 3}
   Seconds: 4
-  Range: 35
+  Range: 25
 --- !u!23 &1693135398
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7441,7 +7441,6 @@ GameObject:
   - component: {fileID: 1757711609}
   - component: {fileID: 1757711613}
   - component: {fileID: 1757711612}
-  - component: {fileID: 1757711611}
   - component: {fileID: 1757711610}
   m_Layer: 0
   m_Name: Chicken (2)
@@ -7477,22 +7476,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.025469162, y: 0.032034773, z: 0.029162545}
   m_Center: {x: -0.00020655274, y: -0.006211379, z: 0.0055560423}
---- !u!114 &1757711611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1757711608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a28c95b1ba9da54b9060d5bfa9b184f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firePoint: {fileID: 743328388}
-  Bullet: {fileID: 7233536391890974513, guid: 98d15360d0e78344d802ca30b1250c04, type: 3}
-  Seconds: 4
-  Range: 35
 --- !u!23 &1757711612
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8504,7 +8487,6 @@ GameObject:
   - component: {fileID: 2044169288}
   - component: {fileID: 2044169292}
   - component: {fileID: 2044169291}
-  - component: {fileID: 2044169290}
   - component: {fileID: 2044169289}
   m_Layer: 0
   m_Name: Chicken (1)
@@ -8540,22 +8522,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.025469162, y: 0.032034773, z: 0.029162545}
   m_Center: {x: -0.00020655274, y: -0.006211379, z: 0.0055560423}
---- !u!114 &2044169290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2044169287}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a28c95b1ba9da54b9060d5bfa9b184f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firePoint: {fileID: 743328388}
-  Bullet: {fileID: 7233536391890974513, guid: 98d15360d0e78344d802ca30b1250c04, type: 3}
-  Seconds: 4
-  Range: 35
 --- !u!23 &2044169291
 MeshRenderer:
   m_ObjectHideFlags: 0
